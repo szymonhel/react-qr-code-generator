@@ -1,6 +1,6 @@
 on:
-  deployment: 
-    branches: [master]
+  push:
+    branches: [ master ]
 
 name: 'Deployment'
 
