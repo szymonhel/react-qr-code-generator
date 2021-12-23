@@ -21,7 +21,10 @@ export class App extends React.Component<Props, State> {
         <div className={'w-[100vw] h-full flex  align-middle flex-col'}>
           <div>
             <h1 className="text-[3.23rem] font-medium text-center py-5">React QR Code</h1>
-            <SearchBar onSubmit={(val) => this.setState({ qrCodeValue: val })} />
+            <SearchBar
+              generatedValue={this.state.qrCodeValue}
+              onSubmit={(val) => this.setState({ qrCodeValue: val })}
+            />
           </div>
           {this.state.qrCodeValue && (
             <div className="self-center">

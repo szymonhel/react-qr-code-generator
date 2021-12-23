@@ -3,6 +3,7 @@ import * as React from 'react';
 
 type Props = {
   onSubmit: (value: string) => void;
+  generatedValue: string;
 };
 export const SearchBar = (props: Props) => {
   const [val, setVal] = React.useState('');
@@ -17,7 +18,10 @@ export const SearchBar = (props: Props) => {
         onChange={(e) => setVal(e.target.value)}
       />
       <button
-        className={'bg-sky-500/100 px-4 py-2     rounded-md text-white '}
+        disabled={props.generatedValue === val}
+        className={
+          'bg-sky-500/100 px-4 py-2  disabled:bg-sky-300  hover:bg-sky-600  rounded-md text-white '
+        }
         onClick={() => props.onSubmit(val)}>
         Generate
       </button>
