@@ -1,0 +1,61 @@
+Index: .idea/react-qr-code-generator.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/react-qr-code-generator.iml b/.idea/react-qr-code-generator.iml
+new file mode 100644
+--- /dev/null	(date 1640275589252)
++++ b/.idea/react-qr-code-generator.iml	(date 1640275589252)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1640275589252)
++++ b/.idea/modules.xml	(date 1640275589252)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/react-qr-code-generator.iml" filepath="$PROJECT_DIR$/.idea/react-qr-code-generator.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/componets/SearchBar.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// @flow\r\nimport * as React from 'react';\r\n\r\ntype Props = {\r\n  onSubmit: (value: string) => void;\r\n  generatedValue: string;\r\n};\r\nexport const SearchBar = (props: Props) => {\r\n  const [val, setVal] = React.useState('');\r\n\r\n  return (\r\n    <div className=\"flex justify-center w-100 md:space-x-8 p-5 flex-col justify-between md:flex-row md:justify-center \">\r\n      <input\r\n        className=\"py-2 px-3 border rounded border-gray-500 w-full w-1/2 md:w-1/2 mb-4 md:mb-0\"\r\n        type=\"text\"\r\n        placeholder=\"Type value\"\r\n        value={val}\r\n        onChange={(e) => setVal(e.target.value)}\r\n      />\r\n      <button\r\n        disabled={props.generatedValue === val}\r\n        className={\r\n          'bg-sky-500/100 px-4 py-2  disabled:bg-sky-300  hover:bg-sky-600  rounded-md text-white '\r\n        }\r\n        onClick={() => props.onSubmit(val)}>\r\n        Generate\r\n      </button>\r\n    </div>\r\n  );\r\n};\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/componets/SearchBar.tsx b/src/componets/SearchBar.tsx
+--- a/src/componets/SearchBar.tsx	(revision 05c518549d295a077148a5cff5bf1b352d93c21e)
++++ b/src/componets/SearchBar.tsx	(date 1640283417498)
+@@ -2,7 +2,7 @@
+ import * as React from 'react';
+ 
+ type Props = {
+-  onSubmit: (value: string) => void;
++  onSubmit: (_: string) => void;
+   generatedValue: string;
+ };
+ export const SearchBar = (props: Props) => {

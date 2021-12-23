@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 type Props = {
-  onSubmit: (value: string) => void;
+  onSubmit: (_: string) => void;
   generatedValue: string;
 };
 export const SearchBar = (props: Props) => {
