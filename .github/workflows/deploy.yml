@@ -5,7 +5,7 @@ on:
     branches: [ master ]
     
 
-name: 'Deployment'
+name: 'Deployment 2'
 
 jobs:
   build:
